@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { MembersComponent } from './members/members.component';
 import {RouterModule} from '@angular/router'; //for html routing
-
+import { SortPipe } from '../../app.sort';
 @NgModule({
   declarations: [
+    SortPipe,
     AppComponent,
     ProductComponent,
     MembersComponent

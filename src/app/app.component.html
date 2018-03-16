@@ -10,4 +10,16 @@
       <span (click)='removeItem(ind)'>x</span>
     </li>
   </ul>
+  <div class='addItem'>
+    <input type="number" [(ngModel)] = "inputNumber" placeholder="add array here" class="addText">
+    <button (click) = "pushArray()">Add me</button> 
+    <br>
+    {{store  | sort: 'descending'}}
+    
+    <ul>
+     
+
+      
+    </ul>
+  </div>
 </div>
