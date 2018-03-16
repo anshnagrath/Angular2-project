@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
@@ -14,6 +14,7 @@ import {RouterModule} from '@angular/router'; //for html routing
     MembersComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot([
  {     path: 'member',

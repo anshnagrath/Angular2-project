@@ -1,22 +1,13 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-    created by {{obj.name}}
-   <br>
-   <br>
-  <a routerLink="/member">Members</a>
-  <a routerLink="/product">Products</a>
-  <br>
-  <router-outlet></router-outlet>
+<div class ='main'>
+  <h1>item's name</h1>
+  <div class='addItem'>
+    <input (keyup.enter)="pushItem()" [(ngModel)] = "newItem" placeholder="add items here" class="addText">
+    <button (click) = "pushItem()">Add me</button> 
+  </div>
   <ul>
-    <li *ngFor="let i of arr">{{i}}</li>
-    
-  </ul> 
-<p *ngIf="isTrue">Hello</p>
-<p *ngIf="myName=='ansh'; then firstTemp; else secondTemp">Hello{{myName}}</p>
-<ng-template #firstTemp>This is my first template</ng-template>
-<ng-template #secondTemp>This is my secound template</ng-template>
-</h1>
+    <li *ngFor='let i of items; let ind = index'>{{i}}
+      
+      <span (click)='removeItem(ind)'>x</span>
+    </li>
+  </ul>
 </div>
-
